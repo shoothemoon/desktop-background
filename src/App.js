@@ -1,25 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  handleKeyPress = event => {
+    if (event.key === 'Enter') {
+      // this.setState({ isClicked: true })
+      console.log("Ethan should learn on his own")
+    }
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="input-panel" onKeyPress={this.handleKeyPress}>
+        <input type="text" className="input" />
       </div>
     );
   }
